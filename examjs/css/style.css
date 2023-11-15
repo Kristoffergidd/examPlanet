@@ -1,0 +1,210 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(90deg, #0c164d 0%, #190b22 100%);
+  color: white;
+}
+
+.wrapper {
+  margin: 0;
+  width: 100%;
+  height: 100vw;
+}
+
+.solsytemet {
+  display: grid;
+  grid-template-areas:
+    ". . . . h1"
+    ". . . . p";
+  padding: 50px;
+}
+
+.solsytemet h1 {
+  grid-area: h1;
+  margin: 0 0 5px 0;
+  font-size: 70px;
+  margin-left: auto;
+}
+
+.solsytemet p {
+  grid-area: p;
+  margin: 0px;
+  font-size: 40px;
+  color: #c7aa72;
+  margin-left: auto;
+}
+
+.header {
+  margin-left: auto;
+  padding: 50px;
+  grid-column: 3/3;
+  font-size: 50px;
+}
+
+.planets {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-gap: 70px;
+  grid-template-areas: " Sun Jorden Merkurius Venus Mars Jupiter Saturnus Uranus Neptunus";
+  justify-content: center;
+  align-items: center;
+}
+
+.Solen {
+  grid-area: Sun;
+  width: 1000%;
+  height: 1000px;
+  background-color: #ffd029;
+  border-radius: 50%;
+  margin-right: auto;
+  transform: translateX(-90%);
+}
+
+.Jorden {
+  grid-area: Jorden;
+  width: 14px;
+  height: 14px;
+  background-color: #888888;
+  border-radius: 100%;
+}
+
+.Merkurius {
+  grid-area: Merkurius;
+  width: 26px;
+  height: 26px;
+  background-color: #e7cdcd;
+  border-radius: 100%;
+}
+
+.Venus {
+  grid-area: Venus;
+  width: 28px;
+  height: 28px;
+  background-color: #428ed4;
+  border-radius: 100%;
+}
+
+.Mars {
+  grid-area: Mars;
+  width: 14px;
+  height: 14px;
+  background-color: #ef5f5f;
+  border-radius: 100%;
+}
+
+.Jupiter {
+  grid-area: Jupiter;
+  width: 188px;
+  height: 188px;
+  background-color: #e29468;
+  border-radius: 100%;
+}
+
+.Saturnus {
+  grid-area: Saturnus;
+  width: 144px;
+  height: 144px;
+  background-color: #c7aa72;
+  border-radius: 100%;
+  position: relative;
+}
+
+.Uranus {
+  grid-area: Uranus;
+  width: 66px;
+  height: 66px;
+  background-color: #c9d4f1;
+  border-radius: 100%;
+}
+
+.Neptunus {
+  grid-area: Neptunus;
+  width: 66px;
+  height: 66px;
+  background-color: #7a91a7;
+  border-radius: 100%;
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid #ccc;
+  background: linear-gradient(90deg, #0c164d 0%, #190b22 100%);
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 90vw;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+#popupTitle {
+  font-size: 50px;
+  padding: 0px;
+  margin: 0 0 15px 0;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+.planet-info {
+  display: grid;
+  grid-template-areas:
+    "latin-name latin-name latin-name . ."
+    "desc desc desc . ."
+    "desc desc desc . ."
+    "desc desc desc . ."
+    "circumference . distance . ."
+    "max-temp-day max-temp-day  max-temp-night . ."
+    "moons . . . .";
+}
+
+.planet-desc {
+  grid-area: desc;
+}
+.planet-latin-name {
+  grid-area: latin-name;
+  font-size: 30px;
+  color: #ffd029;
+  margin-top: auto;
+  letter-spacing: 14px;
+  text-transform: uppercase;
+}
+.planet-moons {
+  grid-area: moons;
+  word-break: break-word;
+}
+.planet-circumference {
+  grid-area: circumference;
+}
+.planet-distance {
+  grid-area: distance;
+}
+.planet-max-temp-day {
+  grid-area: max-temp-day;
+}
+.planet-max-temp-night {
+  grid-area: max-temp-night;
+}
+
+.underline {
+  border-bottom: #c9d4f1 2px solid;
+  width: 90px;
+}
+
+.ring {
+  font-size: 1.5px;
+  width: 250px;
+  background-color: rgb(187, 187, 187);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(140deg);
+}

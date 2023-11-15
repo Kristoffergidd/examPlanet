@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="solsytemet">
+        <h1>SOLSYSTEMET</h1>
+        <p>SOLARIS</p>
+      </div>
+
+      <div class="planets">
+        <div class="planet Solen" id="0"></div>
+        <div class="planet Jorden" id="1"></div>
+        <div class="planet Merkurius" id="2"></div>
+        <div class="planet Venus" id="3"></div>
+        <div class="planet Mars" id="4"></div>
+        <div class="planet Jupiter" id="5"></div>
+
+        <div class="planet Saturnus" id="6">
+          <div class="ring">h</div>
+        </div>
+
+        <div class="planet Uranus" id="7"></div>
+        <div class="planet Neptunus" id="8"></div>
+      </div>
+
+      <div id="overlay">
+        <div id="overlay-content">
+          <!-- Information om planeten kommer att läggas till här dynamiskt -->
+        </div>
+      </div>
+
+      <div class="popup" id="planetPopup">
+        <div class="popup-content">
+          <span class="close" id="closePopup">&times;</span>
+          <h2 id="popupTitle">Planet Information</h2>
+          <div id="popupInfo"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/index.js"></script>
+  </body>
+</html>
