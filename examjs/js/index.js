@@ -88,6 +88,7 @@ function findPlanetInfo(data, planetId) {
   return planetInfo;
 }
 
+// displayplanetinfo är vår funktion som skriver ut datan från apin till hemsidan här skriver jag ut  informationen genom att hämta informationen från planet. och sedan  lagrar jag dom i p taggar för att kunna styla
 function displayPlanetInfo(planet) {
   popupTitle.textContent = planet.name;
   popupInfo.innerHTML = `
@@ -103,12 +104,14 @@ function displayPlanetInfo(planet) {
   `;
   popup.style.display = "block";
 }
-// lägger tilll
+
+// här gör vi en for loop till planeterna och lägger en eventlistener klick till planeterna. Vi kallar även här på getplanetinfo och genom planetid, 9 kan vi koppla dom så att vi får rätt information
 const planets = document.querySelectorAll(".planet");
 planets.forEach((planet) => {
   planet.addEventListener("click", () => getPlanetInfo(parseInt(planet.id, 9)));
 });
 
+// lägger till eventlistener klick
 closeButton.addEventListener("click", function () {
   popup.style.display = "none";
 });
